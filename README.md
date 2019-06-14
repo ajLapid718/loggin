@@ -16,3 +16,20 @@
 * Open another terminal window; from there, `npm run seed` to seed the database
 
 ## In either case, make sure you have a database titled "loggin" in order to move forward with this project
+
+// A "signup" route and handler function might look like this;
+
+router.post("/signup", async (req, res, next) => {
+  try {
+    const user = await User.create(req.body);
+    req.login(user, err => (err ? next(err) : res.json(user)));
+  }
+  catch (err) {
+    if (err.name === "SequelizeUniqueConstraintError") {
+      res.status(401).send("User already exists");
+    }
+    else {
+      next(err);
+    }
+  }
+});
