@@ -14,3 +14,5 @@
 * `npm run build-watch` to start the webpack process
 * Open another terminal window; from there, `npm run start-server` to start the server process
 * Open another terminal window; from there, `npm run seed` to seed the database
+
+## In either case, make sure you have a database titled "loggin" in order to move forward with this project
