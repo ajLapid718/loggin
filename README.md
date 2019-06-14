@@ -17,7 +17,9 @@
 
 ## In either case, make sure you have a database titled "loggin" in order to move forward with this project
 
-// A "signup" route and handler function might look like this;
+```js
+
+A "signup" route and handler function might look like this;
 
 router.post("/signup", async (req, res, next) => {
   try {
@@ -33,3 +35,5 @@ router.post("/signup", async (req, res, next) => {
     }
   }
 });
+
+```
