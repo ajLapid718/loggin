@@ -17,9 +17,11 @@
 
 ## In either case, make sure you have a database titled "loggin" in order to move forward with this project
 
+By the way, a signup route might look like this (see below):
+
 ```js
 
-A "signup" route and handler function might look like this;
+// A "signup" route and handler function might look like this;
 
 router.post("/signup", async (req, res, next) => {
   try {
