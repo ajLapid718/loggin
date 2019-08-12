@@ -21,13 +21,6 @@ app.use(session({
   saveUninitialized: false
 }))
 
-// Session middleware
-app.use(session({
-  secret: 'This is not a very secure secret...',
-  resave: false,
-  saveUninitialized: false
-}))
-
 // consumes 'req.session' so that passport can know what's on the session
 app.use(passport.initialize())
 
